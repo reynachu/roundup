@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inviter: one
+  invitee: one
+  date: 2025-11-29
+  time: 2025-11-29 13:40:59
+  location: MyString
+  photo_url: MyString
+
+two:
+  inviter: two
+  invitee: two
+  date: 2025-11-29
+  time: 2025-11-29 13:40:59
+  location: MyString
+  photo_url: MyString
