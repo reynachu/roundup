@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roundup</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="nav-left"></div>
+      <!-- empty div to balance the title -->
+      <div class="nav-title">Round Up</div>
+      <div class="nav-right">
+        <a href="/search" class="search-button">
+          <span class="icon search-icon"></span>
+        </a>
+      </div>
+    </nav>
+    <%= yield %>
+    <nav class="bottom-nav">
+      <a href="/" class="nav-item">
+        <span class="icon home-icon"></span>
+      </a>
+      <a href="/create" class="nav-item">
+        <span class="icon plus-icon">+</span>
+      </a>
+      <a href="/profile" class="nav-item">
+        <span class="icon profile-icon"></span>
+      </a>
+    </nav>
+  </body>
+</html>

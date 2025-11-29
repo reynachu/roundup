@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* Bottom navigation bar */
+
+/* Top navigation bar */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;  /* space between left, center, right */
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000;
+}
+
+/* Left section (empty for balance) */
+.top-nav .nav-left {
+  width: 50px; /* same width as right button */
+}
+
+/* Title */
+.top-nav .nav-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  flex: 1;
+}
+
+/* Right section (search button) */
+.top-nav .nav-right {
+  width: 40px;
+  text-align: right;
+}
+
+.top-nav .search-button {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+.top-nav .search-button:hover {
+  color: #444;
+}
+
+.top-nav .search-icon::before {
+  content: "🔍";
+  font-size: 35px;
+  display: block;
+  color: #000;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 1000;
+}
+
+/* Buttons */
+.bottom-nav .nav-item {
+  flex: 1;
+  text-align: center;
+  color: #000;           /* black icons */
+  text-decoration: none; /* remove underline */
+  position: relative;    /* needed for separators */
+}
+
+/* Vertical separator lines (between buttons) */
+.bottom-nav .nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px;        /* spacing from top */
+  right: 0;
+  width: 1px;       /* line thickness */
+  height: 50%;      /* line height relative to nav */
+  background: #ccc; /* line color */
+}
+
+/* Home icon */
+.bottom-nav .home-icon::before {
+  content: "⌂";
+  font-size: 35px;
+  display: block;
+  color: #000;
+}
+
+/* Plus icon */
+.bottom-nav .plus-icon {
+  font-size: 35px;
+  display: block;
+  color: #000;
+}
+
+/* Profile icon - circle placeholder */
+.bottom-nav .profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #000;  /* placeholder black circle */
+  display: inline-block;
+}
